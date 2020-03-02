@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+<style>
+
+
+.background{
+
+position: fixed;
+
+left: 25%;
+
+width: 75%;
+
+
+}
+
+
+div.content_bar{
+
+position: fixed;
+
+top: 0px;
+
+left: 0px;
+
+height: 100%;
+
+width: 25%;
+
+background-color: #BDBCBC;
+
+}
+
+div.content_list{
+
+position: relative;
+
+text-align: center;
+
+top: 25px;
+
+font-family: century;
+
+}
+
+
+
+div.screen{
+
+position: fixed;
+
+left: 25%;
+
+top: 0;
+
+height: 100%;
+
+width: 75%;
+
+background-color: black;
+
+color: yellow;
+
+font-family: century;
+
+font-size: 16px;
+
+}
+
+.instructions{
+
+position: relative;
+
+left: 5%;
+
+top: 2.5%;
+
+}
+
+
+
+.desc{
+
+position: fixed;
+
+top: 50%;
+
+left: 30%;
+
+}
+
+
+
+.next{
+
+bottom: 5%;
+
+left: 18%;
+
+font-family: century;
+
+position: fixed;
+
+}
+
+
+.prev{
+
+bottom: 5%;
+
+left: 2%;
+
+font-family: century;
+
+position: fixed;
+
+}
+
+
+
+
+
+
+.character{
+
+position: fixed;
+
+left: 30%;
+
+top: 15%;
+
+width: 20%;
+
+height: auto;
+
+}
+
+
+.wave{
+
+position: fixed;
+
+left: 60%;
+
+top: 17%;
+
+width: 10%;
+
+height: auto;
+
+}
+
+
+.phrog{
+
+position: fixed;
+
+left: 80%;
+
+top: 22%;
+
+width: 10%;
+
+height: auto;
+
+}
+
+
+
+</style>
+</head>
+<body>
+
+
+
+
+
+<div class="content_bar">
+	<div class="content_list">
+		<p>Table of Contents</p>
+        <p>1. Intro</p>
+        <p>2. What is Slay the Spire</p>
+        <p class="alert alert-success" role="alert">3. How To Play</p>
+        <p>4. Example</p>
+        
+        <a href="WebPage3_2.html"><p class="prev">Previous</p></a>
+
+		<a href="WebPage3_4.html"><p class="next">Next</p></a>
+        
+	</div>
+</div>
+
+
+
+
+
+<div class="screen">
+
+
+
+<div class="desc">
+
+<blockquote id="description">Character: <br>There are four characters you can play as in this game (this character's name is Ironclad). 
+Each character has unique cards only they can get. <br><br>They also all have a few unique potions and relics the other characters do not get. 
+They each start off with a deck of cards that are always the same at the start. They also each have slightly different max health.
+<br>The characters currently in the game are:</blockquote>
+
+<ul>
+	<li id="list1">The Ironclad</li>
+	<li id="list2">The Silent</li>
+	<li id="list3">The Defect</li>
+	<li id="list4">The Watcher (Steam version only until the console versions get patched)</li>
+</ul>
+
+</div>
+
+
+
+<p class="instructions">
+This part covers characters, cards and relics.
+<br>Click the images below for a description.
+</p>
+
+
+<a href="javascript:showDesc1();">
+<img src="https://vignette.wikia.nocookie.net/slay-the-spire/images/7/70/Ironclad.png/revision/latest?cb=20181020082717" class="character">
+</a>
+
+
+<a href="javascript:showDesc2();">
+<img src="https://vignette.wikia.nocookie.net/slay-the-spire/images/9/9e/IronWave.png/revision/latest/scale-to-width-down/155?cb=20181016210817" class="wave">
+</a>
+
+
+<a href="javascript:showDesc3();">
+<img src="https://gamepedia.cursecdn.com/slaythespire_gamepedia_en/9/99/PaperFrog.png?version=8389fcd8ec54b3110c5cee399de7e560" class="phrog">
+</a>
+
+
+</div>
+
+
+<script>
+
+function showDesc1(){
+	document.getElementById("description").innerHTML = "Character: <br>There are four characters you can play as in this game (this character's name is Ironclad). Each character has unique cards only they can get. <br><br>They also all have a few unique potions and relics the other characters do not get. They each start off with a deck of cards that are always the same at the start. They also each have slightly different max health.";
+	document.getElementById("list1").innerHTML = "The Ironclad";
+	document.getElementById("list2").innerHTML = "The Silent";
+	document.getElementById("list3").innerHTML = "The Defect";
+	document.getElementById("list4").innerHTML = "The Watcher";
+}
+
+function showDesc2(){
+	document.getElementById("description").innerHTML = "Cards: <br>Cards have different effect. Some deal damage, some give you block and most have some sort of effect. <br><br>Each cards costs energy to play, which you can see in the top left corner. You start each turn with 3 energy, but there are cards, relics and potions that can give you more in one turn.<br>Some card examples:";
+	document.getElementById("list1").innerHTML = "Cleave: 1 energy - Deal 8 damage to all enemies.";
+	document.getElementById("list2").innerHTML = "Bloodletting: 0 energy - Lose 3 hp, gain 1 energy";
+	document.getElementById("list3").innerHTML = "Bludgeon: 3 energy - Deal 32 damage";
+	document.getElementById("list4").innerHTML = "Flame Barrier: 2 energy - Gain 12 block. Any enemy that attacks you this turn takes 4 damage.";
+}
+
+function showDesc3(){
+	document.getElementById("description").innerHTML = "Relics: <br>Relics are items that have various effects. You can only have one of each and there is no limit to how many you can have at once. <br><br>Some of their effects activate right as you pick them up, and some are passive effects. Some examples of relics:";
+
+	document.getElementById("list1").innerHTML = "Anchor: Gives 10 block on the first turn.";
+	document.getElementById("list2").innerHTML = "Art of War: If you don't play any attacks this turn, gain 1 energy next turn.";
+	document.getElementById("list3").innerHTML = "Mercury Hourglass: Deal 3 damage to all enemies at the start of each turn.";
+	document.getElementById("list4").innerHTML = "Pear: Increase your max hp by 11";
+}
+
+
+</script>
+
+
+
+
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+ 
+
+</body>
+</html>
+
+
+
+
